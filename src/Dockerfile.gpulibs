@@ -6,6 +6,8 @@ RUN pip install --upgrade pip && \
     pip install --no-cache-dir "tensorflow-gpu>=2.1.*" && \
     pip install --no-cache-dir keras
 
+RUN cupy-cuda110
+
 # Install PyTorch with dependencies
 RUN conda install --quiet --yes \
     pyyaml mkl mkl-include setuptools cmake cffi typing
